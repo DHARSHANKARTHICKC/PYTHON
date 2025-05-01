@@ -43,6 +43,7 @@ while True:
 
     if POT <= 0:
         print("No pot amount")
+        break
     
     res = input(">Enter the choise")
 
