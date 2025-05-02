@@ -54,7 +54,7 @@ while True:
     update(game,move,p1)
 
     if full(game):
-        print(game)
+        print(string(game))
         print("tie!")
         break
     if iswinner(game,p1):
