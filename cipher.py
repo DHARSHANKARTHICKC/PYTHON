@@ -31,19 +31,22 @@ while True:
     message = input(">Enter the message to encrypt or decrypt :")
 
     for char in message:
-        char = char.upper()
-        num = SYMBOLS.index(char)
-        if mode == 'encrypt':
-            num = num + key
-        elif mode == 'decrypt':
-            num = num - key   
+        if char.upper() in SYMBOLS:
+            char = char.upper()
+            num = SYMBOLS.index(char)
+            if mode == 'encrypt':
+                num = num + key
+            elif mode == 'decrypt':
+                num = num - key   
 
-        if num < 0:
-            num = num + len(SYMBOLS)
-        elif num > len(SYMBOLS)+1:
-            num = num - len(SYMBOLS)
+            if num < 0:
+                num = num + len(SYMBOLS)
+            elif num > len(SYMBOLS)+1:
+                num = num - len(SYMBOLS)
 
-        print(SYMBOLS[num],end = '')
+            print(SYMBOLS[num],end = '')
+        else:
+            print(char,end='')
 
     res = input(">press q to quit")
     if res.lower() == 'q':
