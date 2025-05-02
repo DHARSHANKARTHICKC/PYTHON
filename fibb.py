@@ -1,7 +1,16 @@
 b = 0
 l = 1
 
-num = input("enter the no :")
+
+while True:
+    num = input("enter the no :")
+    if not num.isdecimal():
+        continue
+    elif int(num) <= 0:
+        continue
+    else:
+        break
+
 
 if num == '1':
     print(b)
