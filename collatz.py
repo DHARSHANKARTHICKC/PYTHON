@@ -17,3 +17,8 @@ while True:
         
         print(num,',',end ="")
 
+    res = input(">Enter q to quit")
+    if res.lower()=='q':
+        break
+    else:
+        continue
