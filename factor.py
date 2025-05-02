@@ -1,6 +1,6 @@
 
 while True:
-    num = input("Enter the no to find the factors :")
+    num = input("Enter the number to find the factors :")
     if not num.isdecimal():
         continue
     elif int(num) < 0:
